@@ -10,9 +10,9 @@ type Model interface {
 }
 
 type modelImpl struct {
-  id int
-  Created  time.Time
-  Updated  time.Time
+  id       int        `db:"id"`
+  Created  time.Time  `db:"Created"`
+  Updated  time.Time  `db:"Updated"`
 }
 
 func (m *modelImpl) SetUpdated(updated time.Time) {
